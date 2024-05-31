@@ -34,9 +34,7 @@ def fetch_deals():
 
 def send_deals(deals):
     for deal in deals:
-        message = f"Ürün: {deal['title']}
-Önceki Fiyat: {deal['original_price']}
-İndirimli Fiyat: {deal['discount_price']}"
+        message = f"Ürün: {deal['title']}\nÖnceki Fiyat: {deal['original_price']}\nİndirimli Fiyat: {deal['discount_price']}"
         bot.send_photo(chat_id, deal['image_url'], caption=message)
 
 def main():
